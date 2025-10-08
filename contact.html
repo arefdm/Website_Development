@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='./styles/main.css'>
+    <link rel='stylesheet' href='./styles/contact.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='./scripts/headerFooterMain.js' type='text/javascript' defer></script>
+
+    <title>contact</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            filter: brightness(30%);
+            margin-bottom: 100px;
+        }
+    </style>
+    <script src='https://maps.googleapis.com/maps/api/js?key=&callback=initMap' async defer></script>
+    <script>
+        function initMap() {
+            var location = { lat: 35.7219, lng: 51.3347 }; 
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <header-component></header-component>
+
+    <section class='main'>
+        <div class='summeryContainer'>
+            <h3 class='summery'>
+                Contact &#8211; Get in touch! I am currently available for contract work
+            </h3>
+        </div>
+
+
+        <div id='contactContainer'>
+
+            <div class='contact'>
+
+                <h4 class='contactTitle'>I am located in</h4>
+
+                <section class='contactContent'>
+                    <p><strong style='color: #222;'>Main Street 1, Williamsville</strong><br />Buffalo, USA</p>
+                    <p><strong style='color: #222;'>office@enfold-minimal.com</strong><br />+555 283 784 333</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer <strong style='color: #222;'>adipiscing</strong>
+                        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                        penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        Nulla consequat massa quis enim.</p>
+                </section>
+
+
+
+            </div>
+
+            <div class='contact'>
+
+                <h4 class='contactTitle'>Feel free to drop me mail</h4>
+
+                <form class='form'>
+                    <input type='text' class='nameEmail' placeholder='Name*'>
+                    <input type='email' class='nameEmail' placeholder='E-mail*'>
+                    <textarea class='textArea' placeholder='Message*'></textarea>
+                    <input class='submit' type='button' value='submit'>
+                </form>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <div id='map'></div>
+
+    <section class='main'>
+        <footer-component class='footerComponent'></footer-component>
+    </section>
+
+
+</body>
+
+<script src='./scripts/signedIn.js'></script>
+<script src='./scripts/responsiveHeader.js'></script>
+<script src='./scripts/contact.js'></script>
+
+</html>

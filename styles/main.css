@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-around;
+    margin: 0;
+    
+  }
+  
+  @keyframes mainSummery {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  .summeryContainer {
+    margin-bottom: 150px;
+    padding-top: 130px;
+    animation-name: mainSummery;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .summery {
+    width: 85vw;
+    font-family: "Playfair Display";
+    font-size: 5vw;
+    font-weight: 300;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .footerComponent{
+    display: flex;
+    justify-content: center;
+   }
+
+  @media screen and (min-width: 768px) {
+    .main {
+    
+      margin: 0 20px;
+      padding: 0 50px;
+    }
+    .summery {
+      width: 100%;
+      padding: 0;
+    }
+  }

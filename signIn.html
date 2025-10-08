@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='./styles/main.css'>
+    <link rel='stylesheet' href='./styles/signIn.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='./scripts/headerFooterMain.js' type='text/javascript' defer></script>
+
+    <title>sign In</title>
+
+</head>
+
+<body class='body'>
+
+    <header-component></header-component>
+
+    <section class='main'>
+        <div class='summeryContainer'>
+            <h3 class='summery'>
+                Sign in to use all feature
+            </h3>
+        </div>
+        <div class='container'>
+            <div class='formContainer' id='formContainer'>
+
+                <div id='signInForm' class='form'>
+                    <h2>Sign In</h2>
+                    <input id='signInEmail' type='email' name='email' placeholder='Email' required>
+                    <input id='signInPassword' type='password' name='password' placeholder='Password' required>
+                    <div id='signInStatusContainer'></div>
+                    <input id='signInButton' type='submit' value='Sign In'>
+
+                    <div class='changeForm'>
+                        <p>Don't have an account? <a href='#' onclick='changeSignInToSignUp()'>Sign Up</a></p>
+                    </div>
+                </div>
+
+
+                <div id='signUpForm' class='form' style='display: none;'>
+                    <h2>Sign Up</h2>
+
+                    <input id='signUpEmail' type='email' name='email' placeholder='Email' required>
+                    <input id='signUpPassword' type='password' name='password' placeholder='Password' required>
+                    <input id='signUpconfirmPass' type='password' name='confirm-password' placeholder='Confirm Password'
+                        required>
+                    <div id='signUpStatusContainer'></div>
+                    <input id='signUpButton' type='submit' value='Sign Up'>
+
+                    <div class='changeForm'>
+                        <p>Already have an account? <a href='#' onclick='changeSignInToSignUp()'>Sign In</a></p>
+                    </div>
+                </div>
+
+                <div id='signedInForm' style='display: none;'>
+                    <h2 id='signedInEmail'></h2>
+                    <h2 id='signedInTitle'></h2>
+                    <form action='#' method='POST' id='signUp' class='form'>
+                        <input id='signOutButton' type='submit' value='Sign out'>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer-component class='footerComponent'></footer-component>
+    </section>
+</body>
+<script src='./scripts/signIn.js'></script>
+<script src='./scripts/signedIn.js'></script>
+<script src='./scripts/responsiveHeader.js'></script>
+
+</html>

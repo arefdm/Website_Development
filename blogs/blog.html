@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='../styles/main.css'>
+    <link rel='stylesheet' href='../styles/blog.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='../scripts/headerFooterSub.js' type='text/javascript' defer></script>
+    <title>blog</title>
+</head>
+
+<body>
+
+    <header-component></header-component>
+
+    <main class='main'>
+
+        <p id='loading'>loading...</p>
+
+        <header id='header'>
+            <a id='headLink' class='headerItem' href='#' rel=''></a>
+            <h1 id='headTitle' class='headerItem'></h1>
+        </header>
+
+        <img id='headImg' src='' alt='' />
+
+        <div class='textContainer'>
+            <p id='firstParagraph'>
+                <strong id='firstStronng' style='color: #222222;'></strong>
+            </p>
+            <blockquote id='blockquote'>
+                <p id='blockquoteParagraph'></p>
+            </blockquote>
+            <p id='secondParagraph'></p>
+        </div>
+        <span id='reference'>
+            <time id='referenceTime'></time>
+            <span>/</span>
+            <span>by <span>
+                    <a id='author' href='./static_blog1.html'></a>
+                </span>
+            </span>
+        </span>
+        <footer class='socialMedia'>
+            <h5 id='socialMediaTitle'>Share this entry</h5>
+            <ul id='socialMediaContainer'>
+                <li id='socialMediaItem1' class='socialMediaItem' style=':hover{background-color: #4267B2;}'>
+                    <a href='' class='socialMediaLink'>
+                        <span class='fa fa-facebook'></span>
+                    </a>
+                </li>
+                <li id='socialMediaItem2' class='socialMediaItem'>
+                    <a href='' class='socialMediaLink' style=':hover{background-color: #222222;}'>
+                        <span class='fa fa-twitter'></span>
+                    </a>
+                </li>
+                <li id='socialMediaItem3' class='socialMediaItem' style='hover{color: #222222;}'>
+                    <a href='' class='socialMediaLink'>
+                        <span class='fa fa-twitter'></span>
+                    </a>
+                </li>
+                <li id='socialMediaItem4' class='socialMediaItem' style=':hover {background-color: #25D366;}'>
+                    <a href='' class='socialMediaLink'>
+                        <span class='fa fa-whatsapp'></span>
+                    </a>
+                </li>
+                <li id='socialMediaItem5' class='socialMediaItem' style='hover{background-color: #E60023;}'>
+                    <a href='' class='socialMediaLink'>
+                        <span class='fa fa-pinterest'></span>
+                    </a>
+                </li>
+                <li id='socialMediaItem6' class='socialMediaItem' style='hover{background-color: #FF4500;}'>
+                    <a href='' class='socialMediaLink'>
+                        <span class='fa fa-reddit'></span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+            </div>
+        </footer>
+    </main>
+
+    <footer-component class='footerComponent'></footer-component>
+
+</body>
+<script src='../scripts/blog.js'></script>
+<script src='../scripts/signedIn.js'></script>
+<script src='../scripts/responsiveHeader.js'></script>
+
+</html>

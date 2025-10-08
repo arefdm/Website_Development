@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+}
+summary{
+    margin: 0;
+}
+
+.summerySubtitle{
+    font-family: 'open sans';
+    font-size: 1.1vw ;
+    color: #B0B0B0;
+    margin: 0;
+}
+
+.descriptionContainer{
+    display: grid;
+    grid-template-columns: auto ;
+    justify-content: space-between;
+    padding-bottom: 130px;
+
+}
+
+.description{
+    width: 85vw;
+    margin: 50px 0 50px;
+}
+
+.descriptionTitle{
+    font-family: 'Playfair Display';
+    font-size: 40px;
+    font-weight:100;
+    margin: 0;
+}
+
+.descriptionContent{
+    font-family: 'open sans';
+    font-size: 16px;
+    color: #B0B0B0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.descriptionStrong{
+    color: #222222;
+}
+
+.figureContainer{
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto ;
+
+    background-color: #222222;
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.figure{
+    background-size: cover;
+    width: 94vw;
+    height: 94vw;
+    margin: 0;
+    transform: rotateX(90deg) skewX(-20deg);
+    transform-origin: bottom;
+    transition: transform 0.6s ;
+}
+.figure.show{
+
+    transform: rotateX(0) skewX(0);
+}
+
+.contentContainer{
+    width: 100%;
+    display: flex;
+   flex-direction: column;
+    justify-content: space-around;
+    padding: 130px 0 130px;
+   
+}
+
+.descriptionNumber{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-content: center;
+    column-gap: 100px;
+}
+
+.number{
+    font-family: 'open sans';
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.numberTitle{
+    font-family: 'open sans';
+    font-size: 16px;
+    color: #B0B0B0;
+    margin: 0;
+}
+.contentView{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.contentView.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 481px) {
+    .figureContainer{
+        grid-template-columns: auto auto;
+    }
+    
+    .figure{ 
+        width: 45.5vw;
+        height: 45.5vw;   
+    }
+}
+
+@media screen and (min-width: 768px) {
+   
+    .descriptionContainer{
+       
+        grid-template-columns: auto auto ;
+        column-gap: 20px;
+    
+    }
+    .description{
+        width: 38vw;
+
+    }
+    .figureContainer{
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+    }
+    
+    .figure{ 
+        width: 32vw;
+        height: 31vw;   
+    }
+    .contentContainer{
+       min-width: 100%;
+       flex-direction: row;
+      
+       justify-content: space-around;
+        
+        
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    .descriptionContainer{
+        grid-template-columns: auto auto;
+    
+    }
+    .description{
+        width: 42.5vw;
+        margin-bottom: 50px;
+    }
+    .descriptionTitle{
+        font-size: 50px;
+       
+    }
+    
+}

@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+}
+
+.biography {
+  position: relative;
+  height: 500px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.biographyList {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  list-style-type: none;
+  padding: 0;
+  overflow: visible;
+  margin: 0;
+}
+.biographyItem {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.biographyItem.show {
+  opacity: 1;
+}
+
+.biographyCardContainer {
+  width: 76vw;
+  padding: 30px 60px 15px 0;
+}
+.biographyYearContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.biographyYear {
+  font-family: "Playfair Display";
+  font-size: 25px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+.iconContainer {
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.biographyCard {
+  padding: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 70vw;
+  height: 229px;
+}
+.biographyCardHead {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  color: #222222;
+  font-weight: bold;
+}
+
+.biographyCardText {
+  font-family: "open sans";
+  font-size: 16px;
+  color: #b0b0b0;
+  overflow: hidden;
+}
+
+.pagination {
+  position: absolute;
+  top: 110px;
+  right: 50px;
+}
+.paginationButton {
+  color: #ffffff;
+  font-size: larger;
+  background-color: #0000004d;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+#pagination2,
+#pagination3 {
+  display: none;
+}
+
+.descriptionContainer {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: space-between;
+  padding-bottom: 130px;
+}
+
+.description {
+  width: 85vw;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.description.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.descriptionTitle {
+  font-family: "Playfair Display";
+  color: #222222;
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.descriptionContent {
+  font-family: "open sans";
+  font-size: 16px;
+  color: #b0b0b0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.descriptionStrong {
+  color: #222222;
+}
+
+.skells {
+  color: #222222;
+  font-family: "open sans";
+  font-size: 15px;
+  place-content: center center;
+  text-transform: uppercase;
+  line-height: 200%;
+}
+
+.barContainer {
+  width: 100%;
+  height: 5px;
+  background-color: #b0b0b0;
+  margin-bottom: 20px;
+}
+#about {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.bar1 {
+  width: 0;
+  height: 5px;
+  background-color: #222222;
+  transition: width 0.9s ease-in-out;
+}
+.bar1.show {
+  width: 100%;
+}
+
+.bar2 {
+  width: 0;
+  height: 5px;
+  background-color: #222222;
+  transition: width 0.9s ease-in-out;
+}
+.bar2.show {
+  width: 85%;
+}
+
+.bar3 {
+  width: 0;
+  height: 5px;
+  background-color: #222222;
+  transition: width 0.9s ease-in-out;
+}
+
+.bar3.show {
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  
+  .descriptionContainer {
+    width: 100%;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+  }
+  .description {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  #pagination2 {
+    display: block;
+  }
+  #pagination1 {
+    display: none;
+  }
+
+  .biographyCardContainer {
+    width: 37vw;
+  }
+  .biographyCard {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1128px) {
+  #pagination3 {
+    display: block;
+  }
+  #pagination2 {
+    display: none;
+  }
+
+  .biographyCardContainer {
+    width: 24.3vw;
+  }
+  .biographyCard {
+    width: 19.8vw;
+  }
+}
